@@ -10,3 +10,16 @@
     <%= render 'user_row', :user => user %>
   <% end %>
 </table>
+<div class='pagination'>
+<ul>
+
+  <li><%= link_to @page.to_i - 2, root_path(:page => @page.to_i-2) %></li>
+  <li><%= link_to @page.to_i - 1, root_path(:page => @page.to_i-1) %></li>
+  <li><%= link_to @page.to_i, root_path(:page => @page.to_i)  %></li>
+  <li><%= link_to @page.to_i + 1, root_path(:page => @page.to_i + 1) %></li>
+  <li><%= link_to @page.to_i + 2, root_path(:page => @page.to_i + 2) %></li>
+
+
+</ul>
+</div>
+
